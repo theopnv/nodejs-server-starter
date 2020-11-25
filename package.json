@@ -1,0 +1,17 @@
+{
+  "name": "nodejs-server-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theo-pnv/nodejs-server-starter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/theo-pnv/nodejs-server-starter/issues"
+  },
+  "homepage": "https://github.com/theo-pnv/nodejs-server-starter#readme"
+}
