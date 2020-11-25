@@ -16,7 +16,7 @@ async function createApp(): Promise<Koa> {
   const router = new KoaRouter();
 
   router.get("/health", (ctx: { body: string }) => {
-    ctx.body = "nok";
+    ctx.body = "ok";
   });
 
   app.use(router.routes());
