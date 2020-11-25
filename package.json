@@ -2,8 +2,9 @@
   "name": "nodejs-server-starter",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "build": "tsc -p ."
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/theo-pnv/nodejs-server-starter.git"
@@ -13,5 +14,8 @@
   "bugs": {
     "url": "https://github.com/theo-pnv/nodejs-server-starter/issues"
   },
-  "homepage": "https://github.com/theo-pnv/nodejs-server-starter#readme"
+  "homepage": "https://github.com/theo-pnv/nodejs-server-starter#readme",
+  "devDependencies": {
+    "typescript": "^4.1.2"
+  }
 }
