@@ -7,6 +7,7 @@ async function main() {
 
   app.listen(port);
 
+  // eslint-disable-next-line no-console
   console.log(`Listening on port http://localhost:${port}/`);
 }
 
@@ -15,7 +16,7 @@ async function createApp(): Promise<Koa> {
   const router = new KoaRouter();
 
   router.get("/health", (ctx: { body: string }) => {
-    ctx.body = "ok";
+    ctx.body = "nok";
   });
 
   app.use(router.routes());
