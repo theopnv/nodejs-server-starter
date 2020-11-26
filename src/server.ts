@@ -3,7 +3,7 @@ import KoaRouter from "koa-router";
 
 async function main() {
   const app = await createApp();
-  const port = process.env.PORT || 3100;
+  const port = process.env.SERVER_PORT || 3100;
 
   app.listen(port);
 
