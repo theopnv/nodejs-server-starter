@@ -1,11 +1,11 @@
 version: "3.8"
 
-x-var: &DB_HOSTNAME database
+x-var: &DB_NAME database
 
 services:
-  database:
+  *DB_NAME:
     image: mongo:4
-    container_name: *DB_HOSTNAME
+    container_name: *DB_NAME
     ports:
       - $MONGO_PORT:27017
     environment:
@@ -24,9 +24,9 @@ services:
     ports:
       - "8081:8081"
     depends_on:
-      - *DB_HOSTNAME
+      - *DB_NAME
     environment:
-      ME_CONFIG_MONGODB_SERVER: *DB_HOSTNAME
+      ME_CONFIG_MONGODB_SERVER: *DB_NAME
       ME_CONFIG_MONGODB_AUTH_DATABASE: $MONGO_INITDB_DATABASE
       ME_CONFIG_MONGODB_AUTH_USERNAME: $MONGO_DATABASE_USERNAME
       ME_CONFIG_MONGODB_AUTH_PASSWORD: $MONGO_DATABASE_PASSWORD
@@ -39,9 +39,9 @@ services:
     build: .
     env_file: ".env"
     environment:
-      DB_HOSTNAME: *DB_HOSTNAME
+      DB_HOSTNAME: *DB_NAME
     depends_on:
-      - *DB_HOSTNAME
+      - *DB_NAME
     ports:
       - $SERVER_PORT:$SERVER_PORT
 

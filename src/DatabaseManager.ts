@@ -33,12 +33,8 @@ abstract class ADatabaseManager {
 class AppDatabaseManager extends ADatabaseManager {
   readonly uri: string = `mongodb://${process.env.MONGO_DATABASE_USERNAME}:${process.env.MONGO_DATABASE_PASSWORD}@${process.env.DB_HOSTNAME}:${process.env.MONGO_PORT}/${process.env.MONGO_INITDB_DATABASE}`;
 
-  async connect(): Promise<Db | null> {
+  async start(): Promise<Db | null> {
     return super.connect(this.uri, process.env.MONGO_INITDB_DATABASE);
-  }
-
-  async start(): Promise<Db> {
-    return this.connect();
   }
 }
 
