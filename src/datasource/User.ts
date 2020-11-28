@@ -1,4 +1,6 @@
 import { MongoDataSource } from "apollo-datasource-mongodb";
+import { FilterQuery } from "mongodb";
+import { ObjectId } from "mongodb";
 import { UserDbObject } from "../generated/types";
 
 interface Context {
@@ -6,7 +8,9 @@ interface Context {
 }
 
 export default class User extends MongoDataSource<UserDbObject, Context> {
-  async findOne(query): Promise<UserDbObject | null> {
+  async findOne(
+    query: FilterQuery<UserDbObject>
+  ): Promise<UserDbObject | null> {
     try {
       const user = await this.collection.findOne(query);
       if (!user) {
@@ -21,7 +25,9 @@ export default class User extends MongoDataSource<UserDbObject, Context> {
     return null;
   }
 
-  async insertOne(args): Promise<UserDbObject | null> {
+  async insertOne(
+    args: Pick<UserDbObject, "name"> & { _id?: ObjectId }
+  ): Promise<UserDbObject | null> {
     try {
       const result = await this.collection.insertOne(args);
       return this.findOneById(result.insertedId);
