@@ -11,4 +11,4 @@ docker-compose*
 README.md
 LICENSE
 .vscode
-__tests__
+test
