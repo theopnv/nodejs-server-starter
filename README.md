@@ -2,6 +2,8 @@
 
 This is the starter I use to build the servers I need for my side projects. Read more about how it works at http://tiny.cc/nodejs-server-starter.
 
+![Blog post front cover](https://miro.medium.com/max/1500/1*i2v2TNtvoB_uq18W4IVLGA.png)
+
 Features:
 - A Koa.js server (Node JS)
 - A MongoDB Database, access with mongo-express
