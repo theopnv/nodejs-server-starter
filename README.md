@@ -17,10 +17,11 @@ Features:
 ## TL;DR - How to build my back-end on top of this starter?
 
 1. Clone the repo. 
-2. Run `npm install` and set up your secrets in the `.env` file.
-3. Start the database and mongo-express containers by running `docker-compose up -d database mongo-express`.
-4. Start the server by running `npm run start`.
-5. Start coding! Extend the server with the features you need for your application.
+2. Run `npm install`.
+3. Duplicate `sample.env`, rename it `.env` and edit it with your secrete variables. 
+4. Start the database and mongo-express containers by running `docker-compose up -d database mongo-express`.
+5. Start the server by running `npm run start`.
+6. Start coding! Extend the server with the features you need for your application.
 
 ## Issues & Contributing
 
