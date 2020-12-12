@@ -1,0 +1,3 @@
+# Makes sure init-mongo.sh is cloned/pulled with LF endings even on Windows
+# Without this, it issues a "$'\r': command not found" error.
+init-mongo.sh text eol=lf
