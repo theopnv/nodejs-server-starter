@@ -3,7 +3,7 @@ WORKDIR /usr/src/app
 
 COPY . .
 RUN npm install typescript@4.0.5 -g --silent
-RUN npm install && npm run build 
+RUN npm install && npm run build
 
 FROM node:15-alpine as runtime-container
 WORKDIR /usr/src/app
