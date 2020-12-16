@@ -19,10 +19,10 @@ Features:
 
 1. Clone the repo.
 2. Run `npm install`.
-3. Duplicate `sample.env`, rename it `.env` and edit it with your secrete variables.
+3. Duplicate `sample.env`, rename it `.env` and edit it with your secret variables.
 4. Start the database and mongo-express containers by running `docker-compose up -d database mongo-express`.
 5. Start the server by running `npm run start`.
-6. Start coding! Extend the server with the features you need for your application.
+6. Start coding! Head to `http://localhost:8081/` to use [mongo-express](https://github.com/mongo-express/mongo-express) to browse the database, and to `localhost:<SERVER_PORT>/graphiql` to play with graphQL. Extend the server with the features you need for your application.
 
 ## Issues & Contributing
 
